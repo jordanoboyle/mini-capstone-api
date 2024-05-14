@@ -2,10 +2,8 @@ class ProductsController < ApplicationController
 
   def all
     # test render
-    product = Product.first
-    render json: {
-      message: "hello"
-    }
+    @products = Product.all
+    render template: "products/index"
   end
 
   def single
