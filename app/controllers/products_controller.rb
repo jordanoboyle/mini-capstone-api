@@ -4,27 +4,13 @@ class ProductsController < ApplicationController
     # test render
     product = Product.first
     render json: {
-      id: product.id,
-      name: product.name,
-      price: product.price,
-      image_url: product.image_url,
-      description: product.description,
-      created_at: product.created_at,
-      updated_at: product.updated_at
+      message: "hello"
     }
   end
 
   def single
-    # test whether we can render from db
-    product = Product.last 
-    render json: {
-      id: product.id,
-      name: product.name,
-      price: product.price,
-      image_url: product.image_url,
-      description: product.description,
-      created_at: product.created_at,
-      updated_at: product.updated_at
-    }
+    # test render through jbuilder db
+    @product = Product.last 
+    render template:"products/show"
   end
 end
