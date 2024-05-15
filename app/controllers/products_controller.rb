@@ -16,8 +16,13 @@ class ProductsController < ApplicationController
 
   def create
     # don't forget the @ symbols for the variables (rails routes through that)
-    p "This is hardcoded, but testing function"
-    @product = Product.new(name: "Rogue Fable III", price: 15, image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIbcd6lTTM34jHqBlYGmHP8zU-LDKSXkSqxHZ2NpS3HA&s", description: "Rogue like with spells and wizards. Simplistic maybe, but addicting as all hell!")
+    p "Trying to make dynamic"
+    @product = Product.new(
+      name: params[:input_name],
+      price: params[:input_price], 
+      image_url: params[:input_image_url], 
+      description: params[:input_description]
+      )
     @product.save
 
     render template:"products/show"  
