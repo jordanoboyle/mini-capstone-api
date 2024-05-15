@@ -6,8 +6,6 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   get "/products", controller: "products", action: "index"
-  # adding :id allows for choice in the product shown 
-  
   get "/products/:id", controller: "products", action: "show"
   
   # Defines the root path route ("/")
