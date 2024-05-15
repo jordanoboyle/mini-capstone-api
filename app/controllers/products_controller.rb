@@ -24,7 +24,18 @@ class ProductsController < ApplicationController
       description: params[:input_description]
       )
     @product.save
-
     render template:"products/show"  
+  end
+
+  def update
+    render json: {
+      message: "Hello there"
+    }
+  end
+
+  def destroy
+    render json: {
+      message: "Hello there"
+    }
   end
 end
