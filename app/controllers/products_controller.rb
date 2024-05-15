@@ -13,4 +13,8 @@ class ProductsController < ApplicationController
     @product = Product.find_by(id: the_id) 
     render template:"products/show"
   end
+
+  def create
+    render json: {message: "Hello there"}
+  end
 end
