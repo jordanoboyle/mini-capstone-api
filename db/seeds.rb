@@ -19,3 +19,4 @@
 #   product = Product.new(name: "Luffy hoodie", price: 55, image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiZJezsIzQgQ7Lgm0dBmw3-Yng7reeleLI9PkzjVJnQw&s", description: "Monkey D Luffy Hoodie")
 #   product.save
 # end
+

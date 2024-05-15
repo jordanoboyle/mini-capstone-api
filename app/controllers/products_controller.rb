@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   end
 
   def show
-    # test offering choice to render with params
+    # Can also be written with syntax: @product = Product.find_by(params[:id])
     the_id = params[:id]
     p the_id
     @product = Product.find_by(id: the_id) 
