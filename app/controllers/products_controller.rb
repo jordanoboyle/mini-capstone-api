@@ -17,18 +17,25 @@ class ProductsController < ApplicationController
     render template: "products/index"
   end
 
-  def show  
-    @product = Product.find_by(params[:id]) 
-    render template:"products/show"
+  def show
+    @product = Product.first
+    @product = Product.find_by(id: params[:id])
+    render template: "products/show"
   end
   
   def update
-    render json: {mess: "hello there"}
+    @product = Product.find_by(id: params[:id])
+    @product.name = params[:name]
+    @product.price = params[:price]
+    @product.image_url = params[:image_url]
+    @product.description = params[:description]
+    @product.save
+    render template: "products/show"
   end
   
-  def destroy
-    render json: {mess: "Hello there"}
-  end
+  # def destroy
+  #   render json: {mess: "Hello there"}
+  # end
 end
   
 
