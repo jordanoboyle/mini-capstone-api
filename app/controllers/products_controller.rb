@@ -1,22 +1,7 @@
 class ProductsController < ApplicationController
 
-  def index
-    # test render
-    @products = Product.all
-    render template: "products/index"
-  end
-
-  def show
-    # Can also be written with syntax: @product = Product.find_by(params[:id])
-    the_id = params[:id]
-    p the_id
-    @product = Product.find_by(id: the_id) 
-    render template:"products/show"
-  end
-
   def create
     # don't forget the @ symbols for the variables (rails routes through that)
-    p "Trying to make dynamic"
     @product = Product.new(
       name: params[:input_name],
       price: params[:input_price], 
@@ -26,16 +11,24 @@ class ProductsController < ApplicationController
     @product.save
     render template:"products/show"  
   end
-
-  def update
-    render json: {
-      message: "Hello there"
-    }
+  
+  def index
+    @products = Product.all
+    render template: "products/index"
   end
 
+  def show  
+    @product = Product.find_by(params[:id]) 
+    render template:"products/show"
+  end
+  
+  def update
+    render json: {mess: "hello there"}
+  end
+  
   def destroy
-    render json: {
-      message: "Hello there"
-    }
+    render json: {mess: "Hello there"}
   end
 end
+  
+
