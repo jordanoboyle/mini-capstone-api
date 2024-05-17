@@ -20,3 +20,6 @@
 #   product.save
 # end
 
+# Product.create(name: "Rogue One T-shirt", price: 20, image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNitzTI9hOr2rQ9Ma4t12ISRZrFP9R7GYWXeB9YeMrGQ&s", description: "Star wars as it was meant to be!" )
+
+# Product.create(name: "Ni No Kuni: Wrath of the White Witch", price: 30, image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfzj99CexElJwlYW5DlycGbO_UQX6BLwUlVrfOj3aqYQ&s", description: "Video game. Studio Ghibli enters the world of video games." )
