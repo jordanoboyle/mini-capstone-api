@@ -3,13 +3,13 @@ class ProductsController < ApplicationController
   def create
     # don't forget the @ symbols for the variables (rails routes through that)
     @product = Product.new(
-      name: params[:input_name],
-      price: params[:input_price], 
-      image_url: params[:input_image_url], 
+      name:        params[:input_name],
+      price:       params[:input_price], 
+      image_url:   params[:input_image_url], 
       description: params[:input_description]
       )
     @product.save
-    render template:"products/show"  
+    render  template:"products/show"  
   end
   
   def index
