@@ -13,4 +13,9 @@ class Product < ApplicationRecord
     tax = price * tax_rate
     return tax 
   end
+
+  def total  # this is kind of like defining a new attribute and can be accessed as such.
+    total = price + tax
+    return total
+  end
 end
