@@ -3,11 +3,11 @@ class ProductsController < ApplicationController
   def create
     # don't forget the @ symbols for the variables (rails routes through that)
     @product = Product.new(
-      name:        params[:input_name],
-      price:       params[:input_price], 
-      image_url:   params[:input_image_url], 
-      description: params[:input_description],
-      inventory: params[:input_inventory],
+      name:        params[:name],
+      price:       params[:price], 
+      image_url:   params[:image_url], 
+      description: params[:description],
+      inventory: params[:inventory],
       )
     @product.save
     
@@ -32,8 +32,11 @@ class ProductsController < ApplicationController
     @product.image_url = params[:image_url] || @product.image_url    
     @product.description = params[:description] || @product.description
     @product.inventory = params[:inventory] || @product.inventory
-    @product.save
-    render template: "products/show"
+    if @product.save
+      render template: "products/show"
+    else 
+      render json: {error_messages: @product.errors.full_messages}
+    end
   end
   
   def destroy
