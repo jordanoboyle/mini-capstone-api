@@ -9,6 +9,7 @@ class ProductsController < ApplicationController
       description: params[:input_description]
       )
     @product.save
+    
     render  template:"products/show"  
   end
   
