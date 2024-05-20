@@ -9,9 +9,11 @@ class ProductsController < ApplicationController
       description: params[:description],
       inventory: params[:inventory],
       )
-    @product.save
+    if @product.save
+      render  template:"products/show"  
+    else
+      render json: {error: @product.errors.full_messages}
     
-    render  template:"products/show"  
   end
   
   def index
