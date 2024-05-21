@@ -7,13 +7,13 @@ class ProductsController < ApplicationController
       price:       params[:price], 
       image_url:   params[:image_url], 
       description: params[:description],
-      inventory: params[:inventory],
+      inventory:   params[:inventory],
       )
     if @product.save
       render  template:"products/show"  
     else
       render json: {error: @product.errors.full_messages}
-    
+    end
   end
   
   def index
