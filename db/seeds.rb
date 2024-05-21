@@ -25,9 +25,18 @@
 # Product.create(name: "Ni No Kuni: Wrath of the White Witch", price: 30, image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfzj99CexElJwlYW5DlycGbO_UQX6BLwUlVrfOj3aqYQ&s", description: "Video game. Studio Ghibli enters the world of video games." )
 
 
-supplier = Supplier.new(name: "Box Lunch", email: "person@BL.com", phone_number: "3333333333")
-supplier.save
-supplier = Supplier.new(name: "Hot Topic", email: "lady@TOPIC.com", phone_number: "5647657784")
-supplier.save
-supplier = Supplier.new(name: "Etsy", email: "person@etsy.com", phone_number: "6768989000")
-supplier.save
+# supplier = Supplier.new(name: "Box Lunch", email: "person@BL.com", phone_number: "3333333333")
+# supplier.save
+# supplier = Supplier.new(name: "Hot Topic", email: "lady@TOPIC.com", phone_number: "5647657784")
+# supplier.save
+# supplier = Supplier.new(name: "Etsy", email: "person@etsy.com", phone_number: "6768989000")
+# supplier.save
+
+
+# ELIMINATES PRODUCTS BASED ON NAME
+# Product.all.each do |element|
+#   if element[:name] == "\"Rogue Wizard IV\""
+#     element.destroy 
+#   end
+# end
+
