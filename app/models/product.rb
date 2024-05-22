@@ -3,6 +3,7 @@ class Product < ApplicationRecord
   validates :price, numericality: { greater_than: 0}
   validates :description, length: { in: 20...501}
 
+  has_many :images
   belongs_to :supplier
   # ABOVE IS THE CONVENTION FOR THIS, BUT BELOW IS THE TRUE SYNTAX
   # def supplier
