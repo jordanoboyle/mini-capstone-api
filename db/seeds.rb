@@ -40,3 +40,7 @@
 #   end
 # end
 
+# 13.times do
+#   image = Image.new()
+#   image.save
+# end
