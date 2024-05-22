@@ -21,7 +21,9 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
         tax: 1.0,
         total: 2.0, 
         image_url: "image.jpg", 
-        description: "test description"  
+        description: "test description",
+        supplier_id: "test supplier_id",
+
       }
     }
     end
