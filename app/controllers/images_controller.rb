@@ -1,7 +1,16 @@
 class ImagesController < ApplicationController
 
   def create
-    render json: {message: "Hello there"}
+    @image = Image.new(
+      product_id: params[:product_id],
+      url: params[:url]
+    )
+
+    if @image.save
+      render template: "images/show"
+    else
+      render json: {ERROR: @image.errors.full_messages}
+    end
   end
   
   def index
