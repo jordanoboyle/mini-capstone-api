@@ -29,4 +29,5 @@ class Product < ApplicationRecord
     total = price + tax 
     return total
   end
+  
 end
