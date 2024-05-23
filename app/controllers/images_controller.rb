@@ -19,7 +19,8 @@ class ImagesController < ApplicationController
   end
 
   def show
-    render json: {message: "Hello there"}
+    @image = Image.find_by(id: params[:id])
+    render template: "images/show"
   end
 
   def update
