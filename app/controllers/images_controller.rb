@@ -24,10 +24,18 @@ class ImagesController < ApplicationController
   end
 
   def update
-    render json: {message: "Hello there"}
+    @image = Image.find_by(id: 30)
+    @image.product_id = 10
+    @image.url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK-wWeNXDdM9IoN04AOKa8Li7rq7KQSk06WqLxSUEyeA&s"
+
+    @image.save
+    render template: "images/show"
   end
 
   def destroy
-    render json: {message: "Hello there"}
+    @image = Image.find_by(id: params[:id])
+    @image.destroy
+
+    render template: "images/show"
   end
 end
