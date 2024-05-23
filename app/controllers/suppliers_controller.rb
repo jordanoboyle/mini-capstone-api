@@ -24,7 +24,17 @@ class SuppliersController < ApplicationController
   end
 
   def update
-    render json: {message: "jim is dead"}
+    @supplier = Supplier.find_by(id: params[:id])
+    @supplier.name = params[:name] || @supplier.name
+    @supplier.email = params[:email] || @supplier.email
+    @supplier.phone_number = params[:phone_number] || @supplier.phone_number
+
+    if @supplier.save
+      render template: "suppliers/show"
+    else
+      render json: {ERRORS: @supplier.errors.full_messages}
+    end
+
   end
   
   def destroy

@@ -1,7 +1,7 @@
 class Supplier < ApplicationRecord
   validates :name, presence: true, length: { minimum: 3 }
   validates :email, presence: true, length: { minimum: 7 }
-  validates :phone, presence: true
+  validates :phone_number, presence: true, length: { minimum: 10, maximum: 10} 
 
   
 
@@ -13,7 +13,7 @@ class Supplier < ApplicationRecord
   def country_code_number
     pretty = "(+1) #{phone_number}"
     return pretty
-    end
+  end
 
 
 
