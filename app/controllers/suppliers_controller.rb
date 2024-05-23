@@ -14,11 +14,13 @@ class SuppliersController < ApplicationController
   end
 
   def index
-    render json: {message: "jim is dead"}
+    @suppliers = Supplier.all
+    render template: "suppliers/index"
   end
 
   def show
-    render json: {message: "jim is dead"}
+    @supplier = Supplier.find_by(id: params[:id])
+    render template: "suppliers/show"
   end
 
   def update

@@ -13,7 +13,7 @@ class Supplier < ApplicationRecord
   def country_code_number
     pretty = "(+1) #{phone_number}"
     return pretty
-  end
+    end
 
 
 
