@@ -14,7 +14,8 @@ class ImagesController < ApplicationController
   end
   
   def index
-    render json: {message: "Hello there"}
+    @images = Image.all
+    render template: "images/index"
   end
 
   def show
