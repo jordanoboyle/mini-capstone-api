@@ -44,7 +44,11 @@ class ProductsController < ApplicationController
   def destroy
     @product = Product.find_by(id: params[:id])
     @product.destroy
-    render template: "products/show"
+    if @product.destroy
+      render json: {confirmation: "The product has been eliminated."}
+    else
+      render json: {Errors: @product.error.full_messages}
+    end
   end
 end
   
