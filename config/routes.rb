@@ -25,6 +25,12 @@ Rails.application.routes.draw do
   get "/images/:id", controller: "images", action: "show"
   patch "/images/:id", controller: "images", action: "update"
   delete "/images/:id", controller: "images", action: "destroy"
+
+  # Users Controller Routes
+  post "/users", controller: "users", action: "create"
+
+
+
   # Defines the root path route ("/")
   # root "posts#index"
 end
