@@ -26,8 +26,11 @@ Rails.application.routes.draw do
   patch "/images/:id", controller: "images", action: "update"
   delete "/images/:id", controller: "images", action: "destroy"
 
-  # Users Controller Routes
+  # Users Controller Routes (sign up)
   post "/users", controller: "users", action: "create"
+
+  # Sessions Controller Routes (login)
+  post "/sessions", controller: "sessions", action: "create"
 
 
 
