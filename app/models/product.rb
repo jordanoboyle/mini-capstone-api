@@ -4,8 +4,14 @@ class Product < ApplicationRecord
   validates :description, length: { in: 20...501}
   validates :supplier_id, presence: true
 
+  # HAS MANY
   has_many :images
+  has_many :orders
+
+  #BELONGS TO
   belongs_to :supplier
+
+
   # ABOVE IS THE CONVENTION FOR THIS, BUT BELOW IS THE TRUE SYNTAX
   # def supplier
   #   Supplier.find_by(id: supplier_id)
