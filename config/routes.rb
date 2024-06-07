@@ -32,6 +32,10 @@ Rails.application.routes.draw do
   # Sessions Controller Routes (login)
   post "/sessions", controller: "sessions", action: "create"
 
+  #Orders Controller Routes
+  post "/orders",   controller: "orders",   action: "create"
+  
+
 
 
   # Defines the root path route ("/")
