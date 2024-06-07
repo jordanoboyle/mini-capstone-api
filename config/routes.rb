@@ -33,9 +33,9 @@ Rails.application.routes.draw do
   post "/sessions", controller: "sessions", action: "create"
 
   #Orders Controller Routes
-  post "/orders",   controller: "orders",   action: "create"
-  
-
+  post "/orders",    controller: "orders",   action: "create"
+  get "/orders/:id", controller: "orders",   action: "show"
+  get "/orders",     controller: "orders",   action:  "index"   
 
 
   # Defines the root path route ("/")

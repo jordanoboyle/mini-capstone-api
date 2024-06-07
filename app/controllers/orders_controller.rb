@@ -14,5 +14,13 @@ class OrdersController < ApplicationController
     render json: {order: Order.last}
   end
 
-  
+  def show
+    @order = Order.find_by(id: 1)
+    render template: "orders/show"
+  end
+
+  def index
+    @orders = Order.all
+    render template: "orders/index"
+  end
 end
