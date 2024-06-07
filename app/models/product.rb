@@ -7,9 +7,11 @@ class Product < ApplicationRecord
   # HAS MANY
   has_many :images
   has_many :orders
+  
 
   #BELONGS TO
   belongs_to :supplier
+
 
 
   # ABOVE IS THE CONVENTION FOR THIS, BUT BELOW IS THE TRUE SYNTAX
