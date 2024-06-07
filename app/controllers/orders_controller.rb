@@ -3,15 +3,17 @@ class OrdersController < ApplicationController
   def create
     pp current_user
     product = Product.find_by(id: params[:product_id])
-    q = params[:quantity]
+    q = params[:quantity].to_i  # this is important...params come in as a string
+    p product.price
     @order = Order.new(
       user_id: current_user.id,
       product_id: params[:product_id],
       quantity: q,
-      subtotal: product.price.to_f * q,
-      tax: product.tax.to_f * q,
-      total: product.total.to_f * q 
-    )
+      subtotal: (product.price) * q,
+      tax: (product.tax) * q,
+      total: (product.total) * q   
+      ) 
+    
     @order.save
 
     render template: "orders/show"
