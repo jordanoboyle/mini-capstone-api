@@ -2,12 +2,12 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new(
-      user_id: 3,
-      product_id: 9,
+      user_id: current_user.id,
+      product_id: Product.find_by(id: 4).id,
       quantity: 2,
-      subtotal: 35.50,
-      tax: 3.50,
-      total: 38.50 
+      subtotal: Product.find_by(id: 4).price,
+      tax: Product.find_by(id: 4).tax,
+      total: Product.find_by(id: 4).total 
     )
     @order.save
 
