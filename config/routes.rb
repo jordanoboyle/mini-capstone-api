@@ -6,11 +6,11 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   #Products Controller Routes
-  post "/products", controller: "products", action: "create"
-  get "/products", controller: "products", action: "index"
-  get "/products/:id", controller: "products", action: "show"
-  patch "/products/:id", controller: "products", action: "update"
-  delete "/products/:id", controller: "products", action: "destroy"
+  post "/products", controller: "products", action: "create" #only admins
+  get "/products", controller: "products", action: "index" #everyone
+  get "/products/:id", controller: "products", action: "show" #everyone
+  patch "/products/:id", controller: "products", action: "update" #only admins
+  delete "/products/:id", controller: "products", action: "destroy"  #only admins
   
   #Suppliers Controller Routes
   post "/suppliers", controller: "suppliers", action: "create"

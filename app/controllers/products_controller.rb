@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_admin, only: [:create, :update, :destroy]
 
   def create
     # don't forget the @ symbols for the variables (rails routes through that)
