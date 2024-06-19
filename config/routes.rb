@@ -39,6 +39,7 @@ Rails.application.routes.draw do
 
   #Carted_Products Controller Routes
   post "/carted_products", controller: "carted_products", action: "create"
+  get "/carted_products", controller: "carted_products", action: "index"
 
 
   # Defines the root path route ("/")
