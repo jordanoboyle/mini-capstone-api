@@ -4,7 +4,7 @@ class CartedProduct < ApplicationRecord
 
 #Belongs To
   belongs_to :user
-  belongs_to :order
+  belongs_to :order, optional: true
 
 
 
