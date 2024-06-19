@@ -6,9 +6,10 @@ class Product < ApplicationRecord
 
   # HAS MANY
   has_many :images
-  has_many :orders
   has_many :category_products
   has_many :categories, through: :category_products
+
+  
 
   #BELONGS TO
   belongs_to :supplier
