@@ -1,5 +1,5 @@
 class CartedProductsController < ApplicationController
-  before_action :authenticate_user, except: [:index]
+  before_action :authenticate_user, only: [:create]
 
 
   def create
@@ -23,6 +23,7 @@ class CartedProductsController < ApplicationController
     render template: "carted_products/index"
   end
 
+  
 
   
 end

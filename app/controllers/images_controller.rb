@@ -1,4 +1,5 @@
 class ImagesController < ApplicationController
+  
 
   def create
     @image = Image.new(

@@ -7,6 +7,7 @@ class OrdersController < ApplicationController
     subtotal = 0
     carted_products.each do |cp|
       cp.status  = "purchased"
+      cp.save
       subtotal  += cp.product.price
     end
     tax   = subtotal * 0.10

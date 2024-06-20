@@ -29,7 +29,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_admin
     unless current_user && current_user.admin
-      render json: {}, status: :unauthorized
+      render json: {message: "Restricted operation"}, status: :unauthorized
     end
   end
 
