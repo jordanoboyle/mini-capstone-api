@@ -23,4 +23,6 @@ class CartedProductsController < ApplicationController
   end
 
   
+
+  
 end
