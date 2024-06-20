@@ -31,40 +31,43 @@ Product.create(name: "Rogue Fable III", price: 15, description: "Like Rogues Lik
 Product.create(name: "Calcifer Hoody", price: 40, description: "Everyone's favorite fire demon", inventory: 50, supplier_id: 3) #12
 
 #IMAGES TABLE SEED
-Image.create(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXaR8B3xDXlLqOo5Y1q8c2T1lV6K-p31G3wYRw8uEQ4g&s", product_id: 1)
-Image.create(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf3cLQ0YKtXaXWoR8S_QQc_FlbFuA9GaBqxDBsDgJLMA&s", product_id: 1)
-Image.create(url: "https://onepiece.b-cdn.net/wp-content/uploads/2021/05/product-image-1303682131.jpg", product_id: 2)
-Image.create(url: "https://onepiece-merchandise.com/wp-content/uploads/2022/08/One-Piece-Luffy-Hoodie.jpg", product_id: 2)
-Image.create(url: "https://enez76gwp29.exactdn.com/wp-content/uploads/2020/12/redirect12092020091218-1.jpg", product_id: 3)
-Image.create(url: "https://cdn.media.amplience.net/s/hottopic/15881671_hi?$productMainDesktop$&fmt=auto", product_id: 3)
-Image.create(url: "https://www.asakura-japan.com/data/asakura-japan/product/20151125_eb0236.jpg", product_id: 4)
-Image.create(url: "https://cdn.animenewsnetwork.com/thumbnails/max600x600/cms/interest/87491/kb-2.png.jpg", product_id: 4)
-Image.create(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAs2hXo4wDnwxSlpt7y2PEHCxp1iOBOIpsDguSnfGpyQ&s", product_id: 5)
-Image.create(url: "https://superneox.com/cdn/shop/files/LUKE-EP6-lightsaber-24.jpg?v=1706064584", product_id: 5)
-Image.create(url: "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/07/super-mario-bros-wonder-title.jpg", product_id: 6)
-Image.create(url: "https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/ncom/software/switch/70010000068688/e3024df668cdead60e62865924652c811323b0e7c46f51567fe80907f2637cc4", product_id: 6)
-Image.create(url: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSGAiSx-6MFvt7oR7dFJs2RTiEM9KfgiwW3rI3ClY51bFcCJX9APrjWyP9suRbXPEsZPkzkBIGEwzAS-hbYEoud9s3r7lbxGUvW8X0_pSY_X8Pw5UHVA_loKKyW4LekmclDucPpWNQBIg&usqp=CAc", product_id: 7)
-Image.create(url: "https://animeape.com/wp-content/uploads/2022/08/Water-Tribe-Avatar_AOP-Hooded-Cloak-Coat-MAIN_Mockup-800x800.jpg", product_id: 7)
-Image.create(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNitzTI9hOr2rQ9Ma4t12ISRZrFP9R7GYWXeB9YeMrGQ&s", product_id: 8)
-Image.create(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUP6aHyWepU5QgqYNz6F5y1TZj2Gw0Si1LUw&s", product_id: 8)
-Image.create(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfzj99CexElJwlYW5DlycGbO_UQX6BLwUlVrfOj3aqYQ&s", product_id: 9)
-Image.create(url: "https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Ni_No_Kuni_game_battle_screenshot.jpg/260px-Ni_No_Kuni_game_battle_screenshot.jpg", product_id: 9)
-Image.create(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTinC3GLxwb8IfOLNUkVzLwlyVZ3OcxIbqTMtWcGWYZxQ&s", product_id: 10)
-Image.create(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGwfGsHsaioHf_iS5AmRspyEjZdjbC844NB6H1oNWn-w&s", product_id: 10)
-Image.create(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIbcd6lTTM34jHqBlYGmHP8zU-LDKSXkSqxHZ2NpS3HA&s", product_id: 11)
-Image.create(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzr_oZASOkhLGzxXaN4eUFw9BiDW8cfn5ycA&s", product_id: 11)
-Image.create(url: "https://i.etsystatic.com/37825678/r/il/741554/4327915673/il_570xN.4327915673_2lbe.jpg", product_id: 12)
-Image.create(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJaa6U0uYAd-IJcNIzTPPwixgfYmecYLGDA0Moe1UlXQ&s", product_id: 12)
-
+1.time do
+  Image.create(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXaR8B3xDXlLqOo5Y1q8c2T1lV6K-p31G3wYRw8uEQ4g&s", product_id: 1)
+  Image.create(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf3cLQ0YKtXaXWoR8S_QQc_FlbFuA9GaBqxDBsDgJLMA&s", product_id: 1)
+  Image.create(url: "https://onepiece.b-cdn.net/wp-content/uploads/2021/05/product-image-1303682131.jpg", product_id: 2)
+  Image.create(url: "https://onepiece-merchandise.com/wp-content/uploads/2022/08/One-Piece-Luffy-Hoodie.jpg", product_id: 2)
+  Image.create(url: "https://enez76gwp29.exactdn.com/wp-content/uploads/2020/12/redirect12092020091218-1.jpg", product_id: 3)
+  Image.create(url: "https://cdn.media.amplience.net/s/hottopic/15881671_hi?$productMainDesktop$&fmt=auto", product_id: 3)
+  Image.create(url: "https://www.asakura-japan.com/data/asakura-japan/product/20151125_eb0236.jpg", product_id: 4)
+  Image.create(url: "https://cdn.animenewsnetwork.com/thumbnails/max600x600/cms/interest/87491/kb-2.png.jpg", product_id: 4)
+  Image.create(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAs2hXo4wDnwxSlpt7y2PEHCxp1iOBOIpsDguSnfGpyQ&s", product_id: 5)
+  Image.create(url: "https://superneox.com/cdn/shop/files/LUKE-EP6-lightsaber-24.jpg?v=1706064584", product_id: 5)
+  Image.create(url: "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/07/super-mario-bros-wonder-title.jpg", product_id: 6)
+  Image.create(url: "https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/ncom/software/switch/70010000068688/e3024df668cdead60e62865924652c811323b0e7c46f51567fe80907f2637cc4", product_id: 6)
+  Image.create(url: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSGAiSx-6MFvt7oR7dFJs2RTiEM9KfgiwW3rI3ClY51bFcCJX9APrjWyP9suRbXPEsZPkzkBIGEwzAS-hbYEoud9s3r7lbxGUvW8X0_pSY_X8Pw5UHVA_loKKyW4LekmclDucPpWNQBIg&usqp=CAc", product_id: 7)
+  Image.create(url: "https://animeape.com/wp-content/uploads/2022/08/Water-Tribe-Avatar_AOP-Hooded-Cloak-Coat-MAIN_Mockup-800x800.jpg", product_id: 7)
+  Image.create(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNitzTI9hOr2rQ9Ma4t12ISRZrFP9R7GYWXeB9YeMrGQ&s", product_id: 8)
+  Image.create(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUP6aHyWepU5QgqYNz6F5y1TZj2Gw0Si1LUw&s", product_id: 8)
+  Image.create(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfzj99CexElJwlYW5DlycGbO_UQX6BLwUlVrfOj3aqYQ&s", product_id: 9)
+  Image.create(url: "https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Ni_No_Kuni_game_battle_screenshot.jpg/260px-Ni_No_Kuni_game_battle_screenshot.jpg", product_id: 9)
+  Image.create(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTinC3GLxwb8IfOLNUkVzLwlyVZ3OcxIbqTMtWcGWYZxQ&s", product_id: 10)
+  Image.create(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGwfGsHsaioHf_iS5AmRspyEjZdjbC844NB6H1oNWn-w&s", product_id: 10)
+  Image.create(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIbcd6lTTM34jHqBlYGmHP8zU-LDKSXkSqxHZ2NpS3HA&s", product_id: 11)
+  Image.create(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzr_oZASOkhLGzxXaN4eUFw9BiDW8cfn5ycA&s", product_id: 11)
+  Image.create(url: "https://i.etsystatic.com/37825678/r/il/741554/4327915673/il_570xN.4327915673_2lbe.jpg", product_id: 12)
+  Image.create(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJaa6U0uYAd-IJcNIzTPPwixgfYmecYLGDA0Moe1UlXQ&s", product_id: 12)
+end
 
 #CATEGORY SEED
-Category.create(name: "clothing") #1
-Category.create(name: "digital media") #2
-Category.create(name: "video game") #3
-Category.create(name: "anime") #4
-Category.create(name: "cosplay") #5
-Category.create(name: "plateware") #6
-Category.create(name: "sci-fi") #7
+1.time do
+  Category.create(name: "clothing") #1
+  Category.create(name: "digital media") #2
+  Category.create(name: "video game") #3
+  Category.create(name: "anime") #4
+  Category.create(name: "cosplay") #5
+  Category.create(name: "plateware") #6
+  Category.create(name: "sci-fi") #7
+end 
 
 #CATEGORY_PRODUCT SEED
 CategoryProduct.create(product_id: 1, category_id: 6)
