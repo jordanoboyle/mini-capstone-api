@@ -22,7 +22,15 @@ class CartedProductsController < ApplicationController
     render template: "carted_products/index"
   end
 
-  
+  def destroy
+    @carted_product = CartedProduct.find_by(id: params[:id])
+    
+    if @carted_product.destroy
+      render json: {message: "#{@carted_product.product.name} has been removed from cart."}
+    else
+      render json: {errors: @carted_product.errors.full_messages}
+    end
+  end
 
   
 end
