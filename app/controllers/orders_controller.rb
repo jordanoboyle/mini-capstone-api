@@ -2,11 +2,10 @@ class OrdersController < ApplicationController
   before_action :authenticate_user
 
   def create
-    @carted_products = CartedProduct.where(user_id: current_user.id, status: "carted")
+    carted_products = CartedProduct.where(user_id: current_user.id, status: "carted")
     subtotal = 0
-    @carted_products.each do |cp|
+    carted_products.each do |cp|
       subtotal += cp.product.price
-      cp.status = "purchased"
       cp.product.save
     end
     tax = subtotal * 0.10
@@ -20,6 +19,12 @@ class OrdersController < ApplicationController
 
     if @order.save
       render json: {message: "Order has been processed"}
+      # add the order_id to the associated purchased products here.
+      carted_products.each do |cp|
+        cp.status = "purchased"
+        cp.order_id = @order.id
+        cp.save
+      end
     else
       render json: {errors: order.errors.fullmessages}
     end
