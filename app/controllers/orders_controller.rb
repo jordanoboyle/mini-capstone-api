@@ -2,24 +2,30 @@ class OrdersController < ApplicationController
   before_action :authenticate_user
 
   def create
-    pp current_user
-    product = Product.find_by(id: params[:product_id])
-    q = params[:quantity].to_i  # this is important...params come in as a string
-    p product.price
-    @order = Order.new(
-      user_id: current_user.id,
-      product_id: params[:product_id],
-      quantity: q,
-      subtotal: (product.price) * q,
-      tax: (product.tax) * q,
-      total: (product.total) * q   
-      ) 
+    carted_products = CartedProduct.where(user_id: current_user.id, status: "carted")
+
+    subtotal = 0
+    carted_products.each do |cp|
+      cp.status  = "purchased"
+      subtotal  += cp.product.price
+    end
+    tax   = subtotal * 0.10
+    total = subtotal + tax
+    p tax  # 2
+    p total # 20
+    @order          = Order.new()
+    @order.user_id  = current_user.id
+    @order.subtotal = subtotal
+    @order.tax      = tax
+    @order.total    = total
     
-    @order.save
-
-    render template: "orders/show"
+    if @order.save
+      render template: "orders/show"
+    else
+      render json: {Errors: order.errors.fullmessages}
+    end
   end
-
+  
   def show
     @order = Order.find_by(user_id: current_user.id)
     render template: "orders/show"
@@ -29,4 +35,7 @@ class OrdersController < ApplicationController
     @orders = Order.where(user_id: current_user.id)
     render template: "orders/index"
   end
+
+
+
 end

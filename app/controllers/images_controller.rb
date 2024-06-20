@@ -24,9 +24,9 @@ class ImagesController < ApplicationController
   end
 
   def update
-    @image = Image.find_by(id: params[:id])
+    @image            = Image.find_by(id: params[:id])
     @image.product_id = params[:product_id] || @image.product_id
-    @image.url = params[:url] || @image.url
+    @image.url        = params[:url] || @image.url
 
     if @image.save
       render template: "images/show"
