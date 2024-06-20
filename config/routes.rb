@@ -40,7 +40,7 @@ Rails.application.routes.draw do
   #Carted_Products Controller Routes
   post "/carted_products", controller: "carted_products", action: "create"
   get "/carted_products", controller: "carted_products", action: "index"
-  delete "/carted_products", controller: "carted_products", action: "destroy"
+  delete "/carted_products/:id", controller: "carted_products", action: "destroy"
 
 
 
