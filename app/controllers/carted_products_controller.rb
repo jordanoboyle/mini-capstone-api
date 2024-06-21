@@ -1,5 +1,5 @@
 class CartedProductsController < ApplicationController
-  before_action :authenticate_user, only: [:create]
+  before_action :authenticate_user, only: [:create, :destroy]
 
 
   def create
@@ -20,6 +20,14 @@ class CartedProductsController < ApplicationController
   def index
     @carted_products = CartedProduct.where(user_id: current_user.id, status: "carted")
     render template: "carted_products/index"
+  end
+
+  def update
+    # need to access the carted product
+    # then need to adjust the quantity 
+    #conditional the quantity change to remove it from the cart entirely.
+    # if cp.quantity cp.destroy or something similar
+    render json: {message: "hello there"}
   end
 
   def destroy
