@@ -1,5 +1,5 @@
 class CartedProductsController < ApplicationController
-  before_action :authenticate_user, only: [:create, :destroy]
+  before_action :authenticate_user, only: [:create, :destroy, :update]
 
 
   def create
@@ -27,7 +27,24 @@ class CartedProductsController < ApplicationController
     # then need to adjust the quantity 
     #conditional the quantity change to remove it from the cart entirely.
     # if cp.quantity cp.destroy or something similar
-    render json: {message: "hello there"}
+    @carted_product = CartedProduct.find_by(id: params[:id])
+    status = params[:status] || @carted_product.status
+    quantity = params[:quantity] || @carted_product.quantity
+    if status != "removed" && quantity.to_i > 0
+      @carted_product.quantity = quantity.to_i
+      if @carted_product.save
+        render json: {message: "Quantity updated."}
+      else
+        render json: {Errors: @carted_product.errors.full_messages}
+      end
+    elsif status == "removed" || quantity.to_i == 0
+      @carted_product.status = "removed"
+      if @carted_product.save
+        render json: {message: "Item removed from cart"}
+      else
+        render json: {Errors: @carted_product.errors.full_messages}
+      end
+    end
   end
 
   def destroy
