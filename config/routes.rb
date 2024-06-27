@@ -28,6 +28,12 @@ Rails.application.routes.draw do
 
   # Users Controller Routes (sign up)
   post "/users", controller: "users", action: "create"
+  get "/users/:id", controller: "users", action: "show"
+  get "/users", controller: "users", action: "index"
+
+  
+  get '/user-info', to: 'users#show'   #let's see if this works
+  
 
   # Sessions Controller Routes (login)
   post "/sessions", controller: "sessions", action: "create"
