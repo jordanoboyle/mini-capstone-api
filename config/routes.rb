@@ -31,7 +31,7 @@ Rails.application.routes.draw do
   get "/users/:id", controller: "users", action: "show"
   get "/users", controller: "users", action: "index"
 
-  
+  # Direct route for to get user info related to sign-in token
   get '/user-info', to: 'users#show'   #let's see if this works
   
 

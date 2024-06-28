@@ -11,3 +11,18 @@ json.created_at   carted_product.created_at
 json.updated_at   carted_product.updated_at
 
 json.product carted_product.product
+json.images carted_product.product.images
+
+
+# json.product do 
+#   json.id carted_product.product.id
+#   json.name carted_product.product.name
+#   json.description carted_product.product.description
+#   json.price carted_product.product.price
+
+#   json.images carted_product.product.images do |image|
+#     json.id image.id
+#     json.url image.url
+#     json.created_at image.created_at
+#   end
+# end

@@ -22,7 +22,7 @@ class CartedProductsController < ApplicationController
     render template: "carted_products/index"
   end
 
-  def update ###THIS NEEDS TO BE FINISHED (BOTH QUANTITY OR STATUS CAN BE CHANGED)
+  def update 
     # need to access the carted product
     # then need to adjust the quantity 
     #conditional the quantity change to remove it from the cart entirely.
